@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Semana 2</title>
+  <link rel="stylesheet" href="semana2.css">
+</head>
+<body>
+  <header>
+    <div class="izquierda">
+      <img src="upla.png" alt="Logo" class="logo">
+      <div class="info">
+        <p class="universidad">Universidad Peruana Los Andes</p>
+        <h1 class="nombre">Elian Vicente Ramos</h1>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="tareas.html">Tareas</a>
+      <a href="perfil.html">Perfil</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="cuadro">
+      <h2>Semana 2</h2>
+      <p>Sube tus documentos</p>
+
+      <!-- Formulario subir archivo -->
+      <form id="formArchivo" class="form-subir">
+        <input type="file" id="inputArchivo" required>
+        <button type="submit" class="btn-subir">Subir Archivo</button>
+      </form>
+
+      <!-- Tabla de archivos -->
+      <table class="tabla-archivos">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre del Archivo</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="listaArchivos"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p class="bajo">2025 Universidad Peruana los Andes</p>
+  </footer>
+
+  <!-- Ventana modal -->
+<div id="modal" class="modal">
+  <div class="modal-contenido">
+    <span id="cerrarModal" class="cerrar">&times;</span>
+    <div id="visorArchivo"></div>
+  </div>
+</div>
+
+  <script src="semana2.js"></script>
+</body>
+</html>
