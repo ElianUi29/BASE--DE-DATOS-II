@@ -27,11 +27,10 @@
       <p>Sube tus documentos</p>
 
       <!-- Formulario subir archivo -->
-      <form id="formArchivo" class="form-subir" action="subir.php" method="POST" enctype="multipart/form-data">
-  <input type="file" name="archivo" id="inputArchivo" required>
-  <button type="submit" class="btn-subir">Subir Archivo</button>
-</form>
-
+      <form class="form-subir" action="subir.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="archivo" id="inputArchivo" required>
+        <button type="submit" class="btn-subir">Subir Archivo</button>
+      </form>
 
       <!-- Tabla de archivos -->
       <table class="tabla-archivos">
@@ -43,9 +42,8 @@
           </tr>
         </thead>
         <tbody id="listaArchivos">
-       <?php include("listar.php"); ?>
-</tbody>
-
+          <?php include("listar.php"); ?>
+        </tbody>
       </table>
     </div>
   </main>
@@ -55,12 +53,12 @@
   </footer>
 
   <!-- Ventana modal -->
-<div id="modal" class="modal">
-  <div class="modal-contenido">
-    <span id="cerrarModal" class="cerrar">&times;</span>
-    <div id="visorArchivo"></div>
+  <div id="modal" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrarModal" class="cerrar">&times;</span>
+      <div id="visorArchivo"></div>
+    </div>
   </div>
-</div>
 
   <script src="semana1.js"></script>
 </body>
