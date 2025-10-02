@@ -22,33 +22,37 @@
   </header>
 
   <main>
-    <div class="cuadro">
-      <h2>Semana 1</h2>
-      <p>Sube tus documentos</p>
+  <div class="cuadro">
+    <h2>Semana 1</h2>
+    <p>Sube tus documentos</p>
 
-      <!-- Formulario subir archivo -->
-      <form id="formArchivo" class="form-subir" action="subir.php" method="POST" enctype="multipart/form-data">
-  <input type="file" name="archivo" id="inputArchivo" required>
-  <button type="submit" class="btn-subir">Subir Archivo</button>
-</form>
+    <!-- Formulario subir archivo -->
+    <form id="formArchivo" class="form-subir" action="subir.php" method="POST" enctype="multipart/form-data">
+      <input type="file" name="archivo" id="inputArchivo" required>
+      <button type="submit" class="btn-subir">Subir Archivo</button>
+    </form>
 
+    <!-- Tabla -->
+    <table class="tabla-archivos">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre del Archivo</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+    </table>
 
-      <!-- Tabla de archivos -->
-      <table class="tabla-archivos">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Nombre del Archivo</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody id="listaArchivos">
-       <?php include("listar.php"); ?>
-</tbody>
-
-      </table>
+    <!-- Lista de archivos debajo -->
+    <div class="lista-debajo">
+      <ul id="archivosDebajo">
+        <li><a href="Manual de cuenta GitHub.pdf" target="_blank">📄 Manuel de cuenta GitHub</a></li>
+        <li><a href="Manual de para subir tus archivos a GitHub.pdf" target="_blank">📄 Subir Archivos a GitHub</a></li>
+      </ul>
     </div>
-  </main>
+  </div>
+</main>
+
 
   <footer>
     <p class="bajo">2025 Universidad Peruana los Andes</p>
