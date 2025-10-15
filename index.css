@@ -12,7 +12,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, #ffffff, #03aef3);
+  background: linear-gradient(to right, #ffffff, #06f599);
   padding: 10px 20px;
 }
 
@@ -36,7 +36,7 @@ header {
 .universidad {
   margin: 0;
   font-size: 1.1em;
-  color: black;
+  color: rgb(10, 13, 182);
   font-weight: bold;
 }
 
@@ -44,7 +44,7 @@ header {
   margin: 2px 0 0 0;
   font-size: 1.6em;
   font-weight: bold;
-  color: black;
+  color: rgb(10, 13, 182);
 }
 
 nav {
@@ -53,7 +53,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color:  rgb(10, 13, 182);
   text-decoration: none;
   font-weight: bold;
 }
@@ -89,20 +89,6 @@ main {
   transition: background-color
 }
 
-footer {
-    width: 100vw;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    background: var(--footer-bg);
-    color: var(--border-blue);
-    text-align: center;
-    padding: 1em 0;
-    font-size: 1.05em;
-    letter-spacing: 0.04em;
-    box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.397);
-    z-index: 1001;
-}
 .bajo {
     display: block;
     margin-block-start: 1em;
@@ -110,8 +96,18 @@ footer {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
-    color: #03aef3;
+    color: #1505a5;
 }
-
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #0186f3;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.95em;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+}
 
 

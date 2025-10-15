@@ -128,3 +128,4 @@ window.onclick = function(event) {
     visorArchivo.innerHTML = "";
   }
 };
+

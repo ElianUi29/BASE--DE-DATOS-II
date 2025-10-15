@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('Fondo_1.jpg'); 
+  background-image: url('fondo1.jpg'); 
   background-size: 150%;
   background-repeat: no-repeat;
   background-position: center;
@@ -12,7 +12,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, #ffffff, #03aef3);
+  background: linear-gradient(to right, #ffffff, #06f599);
   padding: 10px 20px;
 }
 
@@ -36,7 +36,7 @@ header {
 .universidad {
   margin: 0;
   font-size: 1.1em;
-  color: black;
+  color: rgb(10, 13, 182);
   font-weight: bold;
 }
 
@@ -44,7 +44,7 @@ header {
   margin: 2px 0 0 0;
   font-size: 1.6em;
   font-weight: bold;
-  color: black;
+  color: rgb(10, 13, 182);
 }
 
 nav {
@@ -53,7 +53,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color:  rgb(10, 13, 182);
   text-decoration: none;
   font-weight: bold;
 }
@@ -61,22 +61,6 @@ nav a {
 main {
   padding: 20px;
   text-align: center;
-}
-
-footer {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background: #e3f2fd;
-  text-align: center;
-  padding: 5px;
-  font-size: 0.95em;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
-}
-
-.bajo {
-  color: #0d47a1;
 }
 
 
@@ -96,7 +80,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f0f4ff;
+  background: #6920bd;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -116,8 +100,8 @@ h1 {
 
 .btn-semana {
   text-decoration: none;
-  background: #004080;
-  color: white;
+  background: #c91414;
+  color: rgb(24, 30, 114);
   padding: 10px 20px;
   border-radius: 8px;
   font-weight: bold;
@@ -126,4 +110,24 @@ h1 {
 
 .btn-semana:hover {
   background: #0066cc;
+}
+.bajo {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    color: #1505a5;
+}
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #0186f3;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.95em;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
 }
