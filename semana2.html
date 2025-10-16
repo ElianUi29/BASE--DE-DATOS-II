@@ -27,7 +27,38 @@
     <div class="semana2_url">
       <a class="hijo" href="https://github.com/ElianUi29/BASE--DE-DATOS-II/tree/master/Semana_2" target="_blank">Semana 2</a>
     </div>
+    <div>
+      <h1></h1>
+        <tr>
+        <td>Guía 1 (PDF)</td>
+        <td><button class="btn ver" onclick="verArchivo('Semana_2/Ejemp01_Base.pdf')">Ver</button></td>
+        <td><a href="Semana_2/Ejemp01_Base.pdf" download class="btn descargar">Descargar</a></td>
+      </tr>
+    </div>
+  <!-- Ventana para visualizar -->
+  <div id="visorContenedor" class="visor-contenedor" style="display:none;">
+    <h3>👀 Vista previa del archivo</h3>
+    <iframe id="visorArchivo" width="80%" height="500px"></iframe>
+    <br>
+    <button class="btn cerrar" onclick="cerrarVisor()">Cerrar vista</button>
+  </div>
+
+  <script>
+    function verArchivo(ruta) {
+      const visor = document.getElementById('visorArchivo');
+      const contenedor = document.getElementById('visorContenedor');
+      visor.src = ruta;
+      contenedor.style.display = 'block';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function cerrarVisor() {
+      document.getElementById('visorContenedor').style.display = 'none';
+      document.getElementById('visorArchivo').src = "";
+    }
+  </script>
   </main>
+  
   <footer>
     <p class="bajo">2025 Universidad Peruana los Andes</p>
   </footer>
@@ -39,6 +70,7 @@
     <div id="visorArchivo"></div>
   </div>
 </div>
+
 
   <script src="semana2.js"></script>
 </body>

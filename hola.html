@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Archivos disponibles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>📂 Archivos disponibles</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre del archivo</th>
+        <th>Ver</th>
+        <th>Descargar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- PDF -->
+      <tr>
+        <td>Guía 1 (PDF)</td>
+        <td><button class="btn ver" onclick="verArchivo('Semana_1/Manual para subir tus archivos a GitHub.pdf')">Ver</button></td>
+        <td><a href="Semana_1/Manual para subir tus archivos a GitHub.pdf" download class="btn descargar">Descargar</a></td>
+      </tr>
+
+      <!-- TXT -->
+      <tr>
+        <td>Texto de ejemplo (TXT)</td>
+        <td><button class="btn ver" onclick="verArchivo('archivos/texto1.txt')">Ver</button></td>
+        <td><a href="archivos/texto1.txt" download class="btn descargar">Descargar</a></td>
+      </tr>
+
+      <!-- DOCX -->
+      <tr>
+        <td>Documento Word (DOCX)</td>
+        <td><button class="btn ver" onclick="verArchivo('archivos/ejemplo.docx')">Ver</button></td>
+        <td><a href="archivos/ejemplo.docx" download class="btn descargar">Descargar</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Ventana para visualizar -->
+  <div id="visorContenedor" class="visor-contenedor" style="display:none;">
+    <h3>👀 Vista previa del archivo</h3>
+    <iframe id="visorArchivo" width="80%" height="500px"></iframe>
+    <br>
+    <button class="btn cerrar" onclick="cerrarVisor()">Cerrar vista</button>
+  </div>
+
+  <script>
+    function verArchivo(ruta) {
+      const visor = document.getElementById('visorArchivo');
+      const contenedor = document.getElementById('visorContenedor');
+      visor.src = ruta;
+      contenedor.style.display = 'block';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function cerrarVisor() {
+      document.getElementById('visorContenedor').style.display = 'none';
+      document.getElementById('visorArchivo').src = "";
+    }
+  </script>
+</body>
+</html>
+

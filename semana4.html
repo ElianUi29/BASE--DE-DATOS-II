@@ -24,8 +24,63 @@
     <h2>Semanas disponibles</h2>
     <p></p>
     <div class="semana4_url">
-      <a class="hijo" href="https://github.com/ElianUi29/BASE--DE-DATOS-II/tree/master/semana_4" target="_blank">Semana 4</a>
+      <a class="hijo" href="https://github.com/ElianUi29/BASE--DE-DATOS-II/tree/master/semana_4" target="_blank">Semana 4 GitHub</a>
     </div>
+    <div>
+      <h1></h1>
+        <tr>
+        <td>Guía 1 (PDF)</td>
+        <td><button class="btn ver" onclick="verArchivo('semana_4/Arquitectura en la nube.1.pdf')">Ver</button></td>
+        <td><a href="semana_4/Arquitectura en la nube.1.pdf" download class="btn descargar">Descargar</a></td>
+      </tr>
+    </div>
+    <div>
+      <h1></h1>
+        <tr>
+        <td>Guía 1 (PDF)</td>
+        <td><button class="btn ver" onclick="verArchivo('semana_4/Arquitectura para una Startup de Software  1.pdf')">Ver</button></td>
+        <td><a href="semana_4/Arquitectura para una Startup de Software  1.pdf" download class="btn descargar">Descargar</a></td>
+      </tr>
+    </div>
+    <div>
+      <h1></h1>
+        <tr>
+        <td>Guía 1 (PDF)</td>
+        <td><button class="btn ver" onclick="verArchivo('semana_4/Arquitectura Recomendada Nube Distribuida Global 1.pdf')">Ver</button></td>
+        <td><a href="semana_4/Arquitectura Recomendada Nube Distribuida Global 1.pdf" download class="btn descargar">Descargar</a></td>
+      </tr>
+    </div>
+    <div>
+      <h1></h1>
+        <tr>
+        <td>Guía 1 (PDF)</td>
+        <td><button class="btn ver" onclick="verArchivo('semana_4/Diseño y Arquitectura de BT.pdf')">Ver</button></td>
+        <td><a href="semana_4/Diseño y Arquitectura de BT.pdf" download class="btn descargar">Descargar</a></td>
+      </tr>
+    </div>
+
+  <!-- Ventana para visualizar -->
+  <div id="visorContenedor" class="visor-contenedor" style="display:none;">
+    <h3>👀 Vista previa del archivo</h3>
+    <iframe id="visorArchivo" width="80%" height="500px"></iframe>
+    <br>
+    <button class="btn cerrar" onclick="cerrarVisor()">Cerrar vista</button>
+  </div>
+
+  <script>
+    function verArchivo(ruta) {
+      const visor = document.getElementById('visorArchivo');
+      const contenedor = document.getElementById('visorContenedor');
+      visor.src = ruta;
+      contenedor.style.display = 'block';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function cerrarVisor() {
+      document.getElementById('visorContenedor').style.display = 'none';
+      document.getElementById('visorArchivo').src = "";
+    }
+  </script>
   </main>
   <footer>
     <p class="bajo">2025 Universidad Peruana los Andes</p>
