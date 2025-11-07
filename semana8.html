@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Semana 7</title>
+  <link rel="stylesheet" href="semana8.css">
+</head>
+<body>
+  <header>
+    <div class="izquierda">
+      <img src="upla.png" alt="Logo" class="logo">
+      <div class="info">
+        <p class="universidad">Universidad Peruana Los Andes</p>
+        <h1 class="nombre">Vicente Ramos ELian</h1>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="tareas.html">Tareas</a>
+      <a href="perfil.html">Perfil</a>
+    </nav>
+  </header>
+  <main>
+    <h2>SEPTIMA SEMANA</h2>
+    <p></p>
+    <div class="semana8_url">
+      <a class="hijo" href="https://github.com/ElianUi29/BASE--DE-DATOS-II/tree/master/Semana_7" target="_blank">Semana 7 GitHub</a>
+    </div>
+    <div>
+      <h1></h1>
+        <tr>
+        <td class="hola">AGREGAR DATOS EN LA B.D. EN QhatuPERU</td>
+        <td><button class="semana7_url" onclick="verArchivo('Semana_7/AGREGAR DATOS EN LA B.D. EN QhatuPERU.pdf')">Visuzalizar</button></td>
+        <td><a href="Semana_7/AGREGAR DATOS EN LA B.D. EN QhatuPERU.pdf" download class="semana7_url">Descargar</a></td>
+      </tr>
+    </div>
+     <div>
+      <h1></h1>
+        <tr>
+        <td class="hola">CREACION DE 9 TABLAS EN B.D. QhatuPERU</td>
+        <td><button class="semana7_url" onclick="verArchivo('Semana_7/CREACION DE 9 TABLAS EN B.D. QhatuPERU.pdf')">Visuzalizar</button></td>
+        <td><a href="Semana_7/CREACION DE 9 TABLAS EN B.D. QhatuPERU.pdf" download class="semana7_url">Descargar</a></td>
+      </tr>
+    </div>
+     <div>
+      <h1></h1>
+        <tr>
+        <td class="hola">CREACION DE DIAGRAMAS EN SQL SERVER</td>
+        <td><button class="semana7_url" onclick="verArchivo('Semana_7/CREACION DE DIAGRAMAS EN SQL SERVER.pdf')">Visuzalizar</button></td>
+        <td><a href="Semana_7/CREACION DE DIAGRAMAS EN SQL SERVER.pdf" download class="semana7_url">Descargar</a></td>
+      </tr>
+    </div>
+  <!-- Ventana para visualizar -->
+  <div id="visorContenedor" class="visor-contenedor" style="display:none;">
+    <h3>👀 Vista previa del archivo</h3>
+    <iframe id="visorArchivo" width="80%" height="500px"></iframe>
+    <br>
+    <button class="btn cerrar" onclick="cerrarVisor()">Cerrar vista</button>
+  </div>
+
+  <script>
+    function verArchivo(ruta) {
+      const visor = document.getElementById('visorArchivo');
+      const contenedor = document.getElementById('visorContenedor');
+      visor.src = ruta;
+      contenedor.style.display = 'block';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function cerrarVisor() {
+      document.getElementById('visorContenedor').style.display = 'none';
+      document.getElementById('visorArchivo').src = "";
+    }
+  </script>
+  </main>
+  <footer>
+    <p class="bajo">2025 Universidad Peruana los Andes</p>
+  </footer>
+
+  <!-- Ventana modal -->
+<div id="modal" class="modal">
+  <div class="modal-contenido">
+    <span id="cerrarModal" class="cerrar">&times;</span>
+    <div id="visorArchivo"></div>
+  </div>
+</div>
+
+  <script src="semana8.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,218 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('fondo6.jpg'); 
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #ffffff, #06f599);
+  padding: 10px 20px;
+}
+
+.izquierda {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 55px;
+  height: auto;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.universidad {
+  margin: 0;
+  font-size: 1.1em;
+  color: rgb(10, 13, 182);
+  font-weight: bold;
+}
+
+.nombre {
+  margin: 2px 0 0 0;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: rgb(10, 13, 182);
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color:  rgb(10, 13, 182);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+
+.bajo {
+  color: #0d47a1;
+}
+/* h2Ç */
+ h2{
+    font-size: clamp(1.6rem, 4.5vw, 3rem);
+    letter-spacing: 0.06em;
+    padding: 0.4em 0.8em;
+    border-radius: 12px;
+    background: rgba(209, 4, 4, 0.959);
+    backdrop-filter: blur(4px);
+    display:inline-block;
+    position:relative;
+    overflow:hidden;
+    color: transparent; /* usamos clip para mostrar gradiente */
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg, var(--accent1), var(--accent2));
+    animation: gradientShift 3.5s linear infinite;
+    box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+    transform-origin:center;
+    animation-name: gradientShift, floatMove;
+    animation-duration: 3.5s, 4s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+  }
+
+  /* pequeño movimiento vertical (float) */
+  @keyframes floatMove{
+    0%   { transform: translateY(0) rotate(0deg); }
+    25%  { transform: translateY(-6px) rotate(-0.5deg); }
+    50%  { transform: translateY(0) rotate(0deg); }
+    75%  { transform: translateY(6px) rotate(0.5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+  }
+
+  /* gradiente que se desplaza */
+  @keyframes gradientShift{
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* opcional: subrayado animado */
+  h2::after{
+    content:"";
+    position:absolute;
+    left:10%;
+    right:10%;
+    bottom:-6px;
+    height:3px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent1));
+    transform-origin:left;
+    transform: scaleX(0);
+    transition: transform .45s cubic-bezier(.2,.9,.2,1);
+  }
+  h2:hover::after{ transform: scaleX(1); }
+
+/* semana5_url */
+/* semana coloresÇ¨Ç */
+.hijo{
+  color: #da5406;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* botoon */
+.semana7_url {
+ font-weight: bold;
+padding: 8px 18px;      /* 🔹 Menos espacio alrededor del texto */
+border-radius: 8px;     /* 🔹 Bordes un poco más redondeados */
+text-decoration: none;
+display: inline-block;
+transition: background 0.3s ease, transform 0.2s ease;
+outline: none;
+color: #fff;
+background: #111;
+cursor: pointer;
+position: relative;
+z-index: 0;
+justify-content: center;
+align-items: center;
+}
+.semana7_url:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.semana7_url:active {
+    color: #000
+}
+
+.semana7_url:active:after {
+    background: transparent;
+}
+
+.semana7_url:hover:before {
+    opacity: 1;
+}
+
+.semana7_url:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes semana1_url {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+} 
+
+
+.bajo {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 10px;
+    unicode-bidi: isolate;
+    color: #1505a5;
+}
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #0186f3;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.95em;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+  height: 5%;
+}
