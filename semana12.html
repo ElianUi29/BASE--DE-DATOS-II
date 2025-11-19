@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Semana 10</title>
+  <link rel="stylesheet" href="semana12.css">
+</head>
+<body>
+  <header>
+    <div class="izquierda">
+      <img src="upla.png" alt="Logo" class="logo">
+      <div class="info">
+        <p class="universidad">Universidad Peruana Los Andes</p>
+        <h1 class="nombre">Vicente Ramos ELian</h1>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="tareas.html">Tareas</a>
+      <a href="perfil.html">Perfil</a>
+    </nav>
+  </header>
+  <main>
+    <h2>DUODECIMO SEMANA</h2>
+    <p></p>
+    <div class="semana9_url">
+      <a class="hijo" href="https://github.com/ElianUi29/BASE--DE-DATOS-II/tree/master/Semana_12" target="_blank">Semana 12 GitHub</a>
+    </div>
+    <div>
+      <h1></h1>
+        <tr>
+        <td class="hola">Practica</td>
+        <td><button class="semana7_url" onclick="verArchivo('Semana_10/Practica_semana10.pdf')">Visuzalizar</button></td>
+        <td><a href="Semana_10/Practica_semana10.pdf" download class="semana7_url">Descargar</a></td>
+      </tr>
+    </div>
+  <!-- Ventana para visualizar -->
+  <div id="visorContenedor" class="visor-contenedor" style="display:none;">
+    <h3>👀 Vista previa del archivo</h3>
+    <iframe id="visorArchivo" width="80%" height="500px"></iframe>
+    <br>
+    <button class="btn cerrar" onclick="cerrarVisor()">Cerrar vista</button>
+  </div>
+
+  <script>
+    function verArchivo(ruta) {
+      const visor = document.getElementById('visorArchivo');
+      const contenedor = document.getElementById('visorContenedor');
+      visor.src = ruta;
+      contenedor.style.display = 'block';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function cerrarVisor() {
+      document.getElementById('visorContenedor').style.display = 'none';
+      document.getElementById('visorArchivo').src = "";
+    }
+  </script>
+  </main>
+  <footer>
+    <p class="bajo">2025 Universidad Peruana los Andes</p>
+  </footer>
+
+  <!-- Ventana modal -->
+<div id="modal" class="modal">
+  <div class="modal-contenido">
+    <span id="cerrarModal" class="cerrar">&times;</span>
+    <div id="visorArchivo"></div>
+  </div>
+</div>
+
+  <script src="semana12.js"></script>
+</body>
+</html>
+
