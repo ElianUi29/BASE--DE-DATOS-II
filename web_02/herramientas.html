@@ -65,17 +65,42 @@
 <div class="wrap">
   <div class="card">
 
-    <header style="margin-bottom:18px; display:flex; gap:12px; align-items:center;">
-      <div class="logo" style="
-        width:56px;height:56px;border-radius:12px;
-        background:linear-gradient(135deg,var(--accent), #fb7185);
-        display:flex;align-items:center;justify-content:center;font-weight:700">NET</div>
-      <div>
-        <h1 style="margin:0;font-size:20px;">Herramientas de Redes</h1>
-        <p class="lead" style="color:var(--muted); font-size:13px;margin:3px 0 0;">
-          Calculadoras de Binario, IPs y Subredes.
-        </p>
+    <!-- ========================================================= -->
+    <!--           ENCABEZADO CON VOLVER Y SALIR                  -->
+    <!-- ========================================================= -->
+    <header style="margin-bottom:18px; display:flex; gap:12px; align-items:center; justify-content:space-between;">
+
+      <div style="display:flex; gap:12px; align-items:center;">
+        <div class="logo" style="
+          width:56px;height:56px;border-radius:12px;
+          background:linear-gradient(135deg,var(--accent), #fb7185);
+          display:flex;align-items:center;justify-content:center;font-weight:700">NET</div>
+
+        <div>
+          <h1 style="margin:0;font-size:20px;">Herramientas de Redes</h1>
+          <p class="lead" style="color:var(--muted); font-size:13px;margin:3px 0 0;">
+            Calculadoras de Binario, IPs y Subredes.
+          </p>
+        </div>
       </div>
+
+      <!-- BOTONES A LA DERECHA -->
+      <div style="display:flex; gap:10px;">
+        <button onclick="history.back()" 
+                style="padding:10px 14px; border-radius:10px; border:0;
+                       background:var(--glass); color:var(--muted);
+                       border:1px solid rgba(255,255,255,0.08); cursor:pointer;">
+          Volver
+        </button>
+
+        <button onclick="window.location.href='index.html'" 
+                style="padding:10px 14px; border-radius:10px; border:0;
+                       background:linear-gradient(90deg,var(--accent), #fb7185);
+                       color:#06202a; font-weight:600; cursor:pointer;">
+          Salir
+        </button>
+      </div>
+
     </header>
 
     <!-- TABS -->
@@ -143,7 +168,6 @@
                 
         <label>Prefijo Base</label>
         <input type="number" id="subPrefixInput" placeholder="Prefijo (ej. 24)" min="1" max="30">
-
 
         <label style="margin-top:12px;">Cantidad de subredes necesarias</label>
         <input type="number" id="subNeed" min="1" placeholder="Ejemplo: 10">
@@ -337,7 +361,6 @@ document.getElementById("subCalc").onclick = ()=>{
     return;
   }
 
-  // bits necesarios para hosts
   let bits = 0;
   while((1 << bits) < need) bits++;
 
@@ -353,10 +376,8 @@ document.getElementById("subCalc").onclick = ()=>{
 
   let mask = getMaskFromPrefix(newPrefix);
 
-  // tamaño del bloque según prefijo
   let block = 2 ** (32 - newPrefix);
 
-  // base de la subred actual
   let base = Math.floor(oct[3] / block) * block;
 
   let start = base + 1;
