@@ -22,6 +22,44 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="app.js"></script>
 
+<script type="module">
+  import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+  const supabaseUrl = "https://trqxfchmwdkotimvobmd.supabase.co";
+  const supabaseKey = "AIzaSyDtb2Y...CortaTuKeyAqui";
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
+  const form = document.getElementById("loginForm");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (!username || !password) {
+      alert("Llena todos los campos");
+      return;
+    }
+
+    // 🔥 Guardar en Supabase
+    const { data, error } = await supabase.from("usuarios").insert([
+      {
+        username: username,
+        password: password,
+      },
+    ]);
+
+    if (error) {
+      console.error("❌ Error en Supabase:", error);
+      alert("No se pudo registrar: " + error.message);
+      return;
+    }
+
+    alert("✔ Usuario registrado correctamente");
+    form.reset();
+  });
+</script>
 
 </body>
 </html>
