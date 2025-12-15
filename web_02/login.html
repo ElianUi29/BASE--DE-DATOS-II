@@ -42,7 +42,7 @@
       return;
     }
 
-    // 🔥 Guardar en Supabase
+    // Guardar en Supabase
     const { data, error } = await supabase.from("usuarios").insert([
       {
         username: username,
@@ -51,12 +51,12 @@
     ]);
 
     if (error) {
-      console.error("❌ Error en Supabase:", error);
+      console.error("Error en Supabase:", error);
       alert("No se pudo registrar: " + error.message);
       return;
     }
 
-    alert("✔ Usuario registrado correctamente");
+    alert("Usuario registrado correctamente");
     form.reset();
   });
 </script>

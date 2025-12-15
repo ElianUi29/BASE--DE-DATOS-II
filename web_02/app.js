@@ -13,14 +13,14 @@ async function registrar() {
   const { data, error } = await client.auth.signUp({ email, password });
 
   if (error) {
-    alert("❌ Error al registrarse: " + error.message);
+    alert("Error al registrarse: " + error.message);
     return;
   }
 
   const userId = data.user?.id;
 
   if (!userId) {
-    alert("❌ No se pudo obtener el ID del usuario.");
+    alert("No se pudo obtener el ID del usuario.");
     return;
   }
 
@@ -35,11 +35,11 @@ async function registrar() {
     });
 
   if (insertError) {
-    alert("❌ Error al guardar datos: " + insertError.message);
+    alert("Error al guardar datos: " + insertError.message);
     return;
   }
 
-  alert("🎉 ¡Registro exitoso!");
+  alert("¡Registro exitoso!");
   window.location.href = "herramientas.html";
 }
 
@@ -51,7 +51,7 @@ async function login() {
   const { error } = await client.auth.signInWithPassword({ email, password });
 
   if (error) {
-    alert("❌ Error al iniciar sesión: " + error.message);
+    alert("Error al iniciar sesión: " + error.message);
     return;
   }
 
